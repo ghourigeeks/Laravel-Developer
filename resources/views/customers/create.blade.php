@@ -72,10 +72,10 @@
                     },
                     error: function(data) {
                         var txt         = '';
-                        console.log(data.responseJSON.errors)
+                        // console.log(data.responseJSON.errors)
                         for (var key in data.responseJSON.errors) {
                             txt += data.responseJSON.errors[key];
-                            txt +='<br>';
+                            txt +='<br> ';
                         }
                         toastr.error(txt);
                     }

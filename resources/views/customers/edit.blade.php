@@ -103,15 +103,3 @@
 
 @endsection
 
-<!-- <script type="text/javascript">
-    $(document).ready(function(){
-
-        $(document).on('click', '.add_customer', function (e) {
-            e.preventDefault();
-            alert();
-            
-        });
-    });
-</script> -->
-
-

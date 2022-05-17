@@ -34,12 +34,14 @@ class CustomerRequest extends FormRequest
       } 
     }
 
-    public function messages()
-    {
-        return [
-            'name.required'  => 'Customer name is required',
-            'name.min'       => 'Customer name must be three or more character long',
-            'email.required' => 'Customer email is required'
-        ];
-    }
+    // custom message if you want
+
+    // public function messages()
+    // {
+    //     return [
+    //         'name.required'  => 'Customer name is required',
+    //         'name.min'       => 'Customer name must be three or more character long',
+    //         'email.required' => 'Customer email is required'
+    //     ];
+    // }
 }
