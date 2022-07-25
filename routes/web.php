@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\PaymentController;
 
 
 Route::get('/', function () {
@@ -15,8 +16,16 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::group(['middleware' => ['auth']], function() {
-// BEGIN::customer
+
 Route::resource('/customers', CustomerController::class);
-// BEGIN::customer
+
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
+
+Route::post('/charge', [PaymentController::class, 'charge'])->name('charge');
+
+Route::get('/success', [PaymentController::class, 'success'])->name('success');
+
+Route::get('/error', [PaymentController::class, 'error'])->name('error');
+
 });
 
